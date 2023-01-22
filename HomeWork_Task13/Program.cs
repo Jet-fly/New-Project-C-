@@ -8,7 +8,7 @@ while (b/10 != 0) // Проверка количества цифр
     b = b/10;
     count++;
 }
-System.Console.WriteLine("Количество цифр: " + count); // Выводим количество цифр
+System.Console.WriteLine("Количество цифр: " + count);
 
 int[] array = new int[count]; // Создали массив, в который запишем цифры числа в обратном порядке
 for (int i = 0; i < count; i++)
