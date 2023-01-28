@@ -2,14 +2,15 @@
 int a = Convert.ToInt32(Console.ReadLine());
 int b = a;
 int count = 0;
+int i = 0;
 
+// Считаем количество цифр:
 while (b > 0)
 {
     b = b / 10;
     count++;
 }
-
-if (count == 0)
+if (count == 0) 
 {
     count++;
 }
@@ -17,19 +18,21 @@ if (count == 0)
 System.Console.WriteLine("Количество цифр: " + count);
 b = a;
 
+// Вводим массив и записываем цифры числа:
 int[] number = new int[count];
-for (int i = count-1; i >= 0; i--)
+for (i = count-1; i >= 0; i--)
 {
     number[i] = b % 10;
     b = b / 10;
 }
 
+// Проверка, является ли число палиндромом:
 bool f = true;
-int k = 0;
-int j = count -1;
-while (k < j)
+i = 0;
+int j = count - 1;
+while (i < j)
 {
-    if (number[k] != number[j])
+    if (number[i] != number[j])
     {
         f = false;
         System.Console.WriteLine("NO");
@@ -37,7 +40,7 @@ while (k < j)
     }
     else
     {
-        k++;
+        i++;
         j--;
     }
 }
