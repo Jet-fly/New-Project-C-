@@ -16,11 +16,13 @@ double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 
-double f(double k, double b, double x)
+double x = f(k1, b1, k2, b2);
+double y = k1 * x + b1;
+
+double f(double k1, double b1, double k2, double b2)
 {
-    double y = k * x + b;
-    return y;
+    double x = (-b1 + b2) / (k1 - k2);
+    return x;
 }
 
-
-
+System.Console.WriteLine($"Точка пересечения: {x} ; {y}");
